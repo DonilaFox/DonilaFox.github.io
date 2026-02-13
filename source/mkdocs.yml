@@ -2,5 +2,6 @@ site_name: Сайт-портфолио Жохова Даниила в пятни
 nav:
     - Home: index.md
     - About: about.md
+    - Lab Works: labworks.md
 theme:
-    name: bootstrap386
+    name: torillic

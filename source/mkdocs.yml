@@ -1,2 +1,4 @@
 site_name: Сайт-портфолио Жохова Даниила в пятницу 13-ое
-
+nav:
+    - Home: index.md
+    - About: about.md

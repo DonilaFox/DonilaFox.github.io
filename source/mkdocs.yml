@@ -3,8 +3,18 @@ nav:
     - Home: index.md
     - About: about.md
     - Lab Works:
-        - Lab work 1: labwork1.md
-        - Lab work 2: labwork2.md
-        - Lab work 3: labwork3.md
+        - LIST OF WORKS: labworks/index.md
+        - Lab work 1: labworks/lab1.md
+        - Lab work 2: labworks/lab2.md
+        - Lab work 3: labworks/lab3.md
+
+markdown_extensions:
+  - pymdownx.highlight:   # Подсветка кода
+      anchor_linenums: true
+  - pymdownx.superfences  # Блоки кода с языком
+  - tables                # Таблицы
+  - toc:                  # Оглавление на странице
+      permalink: true
+
 theme:
     name: torillic

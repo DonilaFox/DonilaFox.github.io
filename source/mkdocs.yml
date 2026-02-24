@@ -17,4 +17,7 @@ markdown_extensions:
       permalink: true
 
 theme:
-    name: torillic
+    name: kpn
+
+extra_css:
+  - css/custom.css

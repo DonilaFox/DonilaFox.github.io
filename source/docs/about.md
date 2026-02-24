@@ -22,7 +22,7 @@
 
 ## Фото
 <div align="center">
-  <img src="images/0304.jpg" alt="Жохов Даниил" width="250" >
+  <img src="docs/images/0304.jpg"  width="250" >
 </div>
 
 ## Контакты

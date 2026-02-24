@@ -2,6 +2,9 @@ site_name: Сайт-портфолио Жохова Даниила в пятни
 nav:
     - Home: index.md
     - About: about.md
-    - Lab Works: labworks.md
+    - Lab Works:
+        - Lab work 1: labwork1.md
+        - Lab work 2: labwork2.md
+        - Lab work 3: labwork3.md
 theme:
     name: torillic

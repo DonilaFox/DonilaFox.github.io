@@ -19,6 +19,16 @@
 
 > «Только Локо - только победа!» 🚂
 
+
+## Фото
+<div align="center">
+  <img src="images/0304.jpg" alt="Жохов Даниил" width="250" >
+</div>
+
+## Контакты
+- **Telegram**: @DaniilZhohov
+- **Email**: zhohovd2007@gmail.com
+- **Discord**: donilafox
 ## 🌐 Онлайн
 - **Никнейм**: DonilaFox  
 - **Язык общения**: Русский

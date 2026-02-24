@@ -1,7 +1,7 @@
 site_name: Сайт-портфолио Жохова Даниила в пятницу 13-ое
 nav:
     - Home: index.md
-    - About: about.md
+    - About Me: about.md
     - Lab Works:
         - LIST OF WORKS: labworks/index.md
         - Lab work 1: labworks/lab1.md

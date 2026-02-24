@@ -1,19 +1,26 @@
-# Welcome to MkDocs
 
-Охаё! WAZZZZUUUUUP
+# Охаё! WAZZZZUUUUUP
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+Это мой персональный статический сайт-портфолио с лабораторными работами по Python.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+##  Назначение сайта
 
-## Project layout
+Данный ресурс предназначен для хранения и демонстрации моих учебных работ. Здесь вы найдёте:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Отчёты по лабораторным работам** — документация, исходный код и выводы по выполненным заданиям.
+- **Справочную информацию** — материалы, используемые в процессе обучения.
+- **Портфолио** — история моего прогресса в изучении компьютерных наук.
+
+---
+
+##  Навигация
+
+| Раздел | Описание |
+|--------|----------|
+| [Лабораторные работы](labworks/index.md) | Список и отчёты по всем лабораторным работам |
+| [ Об авторе](about.md) | Информация обо мне и мои контакты |
+
+---
+
+*Сайт создан с использованием MkDocs | 2026*

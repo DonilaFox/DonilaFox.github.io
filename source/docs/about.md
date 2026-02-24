@@ -20,12 +20,10 @@
 > «Только Локо - только победа!» 🚂
 
 
-## Фото
-<div align="center">
-  <img src="docs/images/0304.jpg"  width="250" >
-</div>
+## 📸 Фото
+![Моё фото](images/0304.jpg)
 
-## Контакты
+## 📞 Контакты
 - **Telegram**: @DaniilZhohov
 - **Email**: zhohovd2007@gmail.com
 - **Discord**: donilafox

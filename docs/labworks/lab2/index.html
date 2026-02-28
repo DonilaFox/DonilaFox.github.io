@@ -222,14 +222,246 @@
         <div class="title-bar__title">Lab work 2</div>
       </div>
       
+      <div class="sidebar--secondary hidden-s hidden-xs">
+        <h4>Table of contents</h4>
+        <ul>
+        
+          
+            
+                <li><a class="a" href="#_1">Цель работы</a></li>
+                
+            
+                <li><a class="a" href="#_2">Задание</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#1">1. Работа с массивами: создание, преобразование, базовые операции</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#2">2. Арифметические операции над массивами</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#3">3. Линейная алгебра</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#4">4. Загрузка и статистический анализ данных</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#4_1">4. Визуализация результатов</a></li>
+                
+                    <li class="child-li"><a class="a child" href="#5">5. Тестирование кода</a></li>
+                
+            
+                <li><a class="a" href="#_3">Выводы</a></li>
+                
+            
+                <li><a class="a" href="#_4">Исходный код</a></li>
+                
+            
+                <li><a class="a" href="#_5">Выводы</a></li>
+                
+            
+          
+        
+        </ul>
+      </div>
+      
       <div class="container content-block">
         <div class="kpn-style">
           <div class="card">
             <div class="card__body">
 
               
-              <p>loading. . .
-Update soon</p>
+              <h1 id="no2-numpy">Лабораторная работа №2: Основы NumPy: массивы и векторные операции<a class="headerlink" href="#no2-numpy" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Дисциплина</strong>: [Python]<br />
+<strong>Выполнил</strong>: Жохов Даниил, группа [3121]<br />
+<strong>Дата</strong>: [28/02/2026]</p>
+</blockquote>
+<hr />
+<h2 id="_1">Цель работы<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Освоить базовые и продвинутые возможности библиотеки NumPy для работы с многомерными массивами, реализовать функции линейной алгебры, статистического анализа и визуализации данных, а также обеспечить надёжность кода с помощью модульного тестирования.</p>
+<h2 id="_2">Задание<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. Работа с массивами: создание, преобразование, базовые операции<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Задача</th>
+<th>Описание</th>
+<th>Решение</th>
+<th>Нюансы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>create_vector()</code></td>
+<td>Создать вектор <code>[0, 1, ..., 9]</code></td>
+<td><code>np.arange(10)</code></td>
+<td>Возвращает 1D-массив формы <code>(10,)</code></td>
+</tr>
+<tr>
+<td><code>create_matrix()</code></td>
+<td>Матрица 5×5 со случайными числами</td>
+<td><code>np.random.rand(5, 5)</code></td>
+<td>Значения в диапазоне <code>[0, 1)</code></td>
+</tr>
+<tr>
+<td><code>reshape_vector()</code></td>
+<td>Преобразовать <code>(10,)</code> → <code>(2, 5)</code></td>
+<td><code>vec.reshape(2, 5)</code></td>
+<td>Требует точного соответствия размера</td>
+</tr>
+<tr>
+<td><code>transpose_matrix()</code></td>
+<td>Транспонирование матрицы</td>
+<td><code>mat.T</code> или <code>np.transpose()</code></td>
+<td>Для 1D-массива транспонирование не меняет форму</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Ключевой принцип:</strong> все операции выполняются <strong>векторизованно</strong>, без циклов — это обеспечивает высокую производительность NumPy.</p>
+</blockquote>
+<hr />
+<h3 id="2">2. Арифметические операции над массивами<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Функция</th>
+<th>Описание</th>
+<th>Реализация</th>
+<th>Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vector_add()</code></td>
+<td>Поэлементное сложение</td>
+<td><code>a + b</code></td>
+<td>Требует одинаковой формы массивов</td>
+</tr>
+<tr>
+<td><code>scalar_multiply()</code></td>
+<td>Умножение на скаляр</td>
+<td><code>vec * scalar</code></td>
+<td>Автоматическое broadcasting</td>
+</tr>
+<tr>
+<td><code>elementwise_multiply()</code></td>
+<td>Поэлементное умножение</td>
+<td><code>a * b</code></td>
+<td>Отличается от матричного умножения</td>
+</tr>
+<tr>
+<td><code>dot_product()</code></td>
+<td>Скалярное произведение</td>
+<td><code>np.dot(a, b)</code></td>
+<td>Возвращает <code>float</code>, а не <code>np.float64</code></td>
+</tr>
+<tr>
+<td><code>matrix_multiply()</code></td>
+<td>Матричное умножение</td>
+<td><code>a @ b</code></td>
+<td>Требует согласованных размерностей</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="3">3. Линейная алгебра<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Функция</th>
+<th>Назначение</th>
+<th>Метод решения</th>
+<th>Edge-кейсы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>matrix_determinant()</code></td>
+<td>Определитель матрицы</td>
+<td><code>np.linalg.det()</code></td>
+<td>Возвращает <code>float</code>, возможна погрешность</td>
+</tr>
+<tr>
+<td><code>matrix_inverse()</code></td>
+<td>Обратная матрица</td>
+<td><code>np.linalg.inv()</code></td>
+<td>Выбрасывает <code>LinAlgError</code> для вырожденных матриц</td>
+</tr>
+<tr>
+<td><code>solve_linear_system()</code></td>
+<td>Решение СЛАУ <code>Ax = b</code></td>
+<td><code>np.linalg.solve()</code></td>
+<td>Требует квадратную <code>A</code> и совместимый <code>b</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="4">4. Загрузка и статистический анализ данных<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Загрузить CSV-файл и вернуть данные в виде NumPy-массива.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">statistical_analysis</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Выполнить статистический анализ одномерного массива данных.&quot;&quot;&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">&quot;mean&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)),</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s2">&quot;median&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)),</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="s2">&quot;std&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)),</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="s2">&quot;min&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">)),</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="s2">&quot;max&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">)),</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="s2">&quot;percentile25&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">25</span><span class="p">)),</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="s2">&quot;percentile75&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">75</span><span class="p">)),</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="p">}</span>
+</code></pre></div>
+<h3 id="4_1">4. Визуализация результатов<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p><strong>Описание задачи:</strong><br />
+Построить и сохранить три типа графиков: гистограмму, тепловую карту корреляции и линейный график.</p>
+<p><strong>Как была решена:</strong>
+- <code>plot_histogram()</code> — гистограмма распределения оценок с адаптивным числом бинов.
+- <code>plot_heatmap()</code> — тепловая карта через <code>seaborn.heatmap()</code> с аннотациями и цветовой схемой <code>coolwarm</code>.
+- <code>plot_line()</code> — линейный график «студент → оценка» с адаптивным отображением подписей оси X.</p>
+<p><strong>Нюансы:</strong>
+- Использован бэкэнд <code>matplotlib.use('Agg')</code> для работы без GUI (важно для серверов и тестов).
+- Все графики сохраняются в папку <code>plots/</code> с высоким DPI (300) и <code>bbox_inches='tight'</code> для аккуратного кадрирования.
+- Для 2D-данных в гистограмме выполняется <code>.flatten()</code> для преобразования в 1D.</p>
+<hr />
+<h3 id="5">5. Тестирование кода<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p><strong>Описание задачи:</strong><br />
+Покрыть все функции модульными тестами с использованием <code>pytest</code>.</p>
+<p><strong>Как была решена:</strong>
+- Файл <code>test.py</code> содержит тесты на корректность вычислений, обработку граничных случаев и проверку создания файлов визуализации.
+- Использованы фикстуры <code>tmp_path</code> для изолированного тестирования сохранения файлов.
+- Проверены исключения: <code>ValueError</code>, <code>np.linalg.LinAlgError</code> при некорректных входных данных.</p>
+<p><strong>Нюансы:</strong>
+- Тесты на визуализацию проверяют не только отсутствие ошибок, но и факт создания непустого файла.
+- Для тестирования <code>load_dataset()</code> создаётся временный CSV-файл, который удаляется после проверки.</p>
+<hr />
+<h2 id="_3">Выводы<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>NumPy</strong> предоставляет мощный и эффективный инструментарий для работы с массивами: все операции векторизованы, что обеспечивает высокую производительность по сравнению с циклами на Python.</p>
+</li>
+<li>
+<p><strong>Линейная алгебра в NumPy</strong> реализована через подмодуль <code>linalg</code>: важно понимать разницу между численно устойчивыми методами (<code>solve</code>) и прямыми вычислениями (<code>inv</code>), а также уметь обрабатывать вырожденные случаи.</p>
+</li>
+<li>
+<p><strong>Статистический анализ</strong> и <strong>нормализация</strong> данных выполняются в несколько строк кода благодаря встроенным функциям NumPy, однако необходимо учитывать детали (например, параметр <code>ddof</code> в <code>std</code>).</p>
+</li>
+<li>
+<p><strong>Визуализация</strong> через <code>matplotlib</code> и <code>seaborn</code> позволяет наглядно представить результаты анализа. Важно настраивать бэкэнд для headless-сред и корректно сохранять графики.</p>
+</li>
+<li>
+<p><strong>Тестирование</strong> с помощью <code>pytest</code> обеспечивает надёжность кода: покрытие граничных случаев и проверка исключений помогают избежать ошибок в продакшене.</p>
+</li>
+<li>
+<p>В ходе работы закреплены навыки:</p>
+</li>
+<li>работы с многомерными массивами,</li>
+<li>векторизации вычислений,</li>
+<li>интеграции NumPy с pandas и matplotlib,</li>
+<li>написания модульных тестов.</li>
+</ol>
+<h2 id="_4">Исходный код<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>https://github.com/DonilaFox/PythonSpring2026ITMO/tree/main/numpy_lab - репозиторий с исходным кодом</p>
+<h2 id="_5">Выводы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>[Выводы]</p>
               
             </div>
           </div>
@@ -272,7 +504,7 @@ Update soon</p>
 
   <!--
   MkDocs version      : 1.6.1
-  Docs Build Date UTC : 2026-02-24 21:24:04.751481+00:00
+  Docs Build Date UTC : 2026-02-28 20:37:56.522366+00:00
   -->
 
   <!--

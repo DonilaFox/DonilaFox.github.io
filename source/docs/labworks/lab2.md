@@ -74,8 +74,11 @@ def statistical_analysis(data: np.ndarray) -> dict[str, float]:
 
 **Как была решена:**
 - `plot_histogram()` — гистограмма распределения оценок с адаптивным числом бинов.
+![Гистограмма](../images/histogram.png)
 - `plot_heatmap()` — тепловая карта через `seaborn.heatmap()` с аннотациями и цветовой схемой `coolwarm`.
+![Тепловая карта](../images/heatmap.png)
 - `plot_line()` — линейный график «студент → оценка» с адаптивным отображением подписей оси X.
+![Линейный график](../images/line_plot.png)
 
 **Нюансы:**
 - Использован бэкэнд `matplotlib.use('Agg')` для работы без GUI (важно для серверов и тестов).

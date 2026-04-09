@@ -1,0 +1,1 @@
+Лабораторная работа №4 выполнена по ссылке: https://colab.research.google.com/drive/1zR7nk1ZRpTIyydDWaM2dL0ZWbdJt82Sw?usp=sharing

@@ -40,7 +40,7 @@
 
 ## Исходный код
 
-https://github.com/DonilaFox/DonilaFox.github.io - репозиторий с исходным кодом
+[GITHUB](https://github.com/DonilaFox/DonilaFox.github.io) - репозиторий с исходным кодом
 
 ## Выводы
 

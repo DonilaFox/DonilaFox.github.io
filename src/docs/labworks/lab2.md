@@ -123,4 +123,4 @@ def statistical_analysis(data: np.ndarray) -> dict[str, float]:
 
 ## Исходный код
 
-https://github.com/DonilaFox/PythonSpring2026ITMO/tree/main/numpy_lab - репозиторий с исходным кодом
+[GITHUB](https://github.com/DonilaFox/PythonSpring2026ITMO/tree/main/numpy_lab) - репозиторий с исходным кодом

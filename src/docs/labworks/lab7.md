@@ -1,0 +1,1 @@
+Лабораторная работа №7 доступна по ссылке [LAB 7](https://colab.research.google.com/drive/1QO-8xPG5snr0UiuTeZC4o62-g3tQmEZr?usp=sharing)

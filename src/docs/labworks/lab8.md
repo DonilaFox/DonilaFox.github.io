@@ -1,0 +1,1 @@
+Лабораторная работа №8 доступна по ссылке [LAB 8](https://colab.research.google.com/drive/1qbw7mPBly6umUxr3OstntbVIQeacpyou?usp=sharing)

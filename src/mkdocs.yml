@@ -12,6 +12,7 @@ nav:
         - Lab work 6: labworks/lab6.md
         - Lab work 7: labworks/lab7.md
         - Lab work 8: labworks/lab8.md
+        - Lab work 9: labworks/lab9.md
 
 markdown_extensions:
   - pymdownx.highlight:   # Подсветка кода
